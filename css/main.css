@@ -20,6 +20,7 @@ a,
 button {
   font-family: "Open Sans", sans-serif;
   line-height: 1.4;
+  font-weight: 400;
 }
 
 h1,
@@ -27,6 +28,7 @@ h2,
 h3,
 h4 {
   line-height: 1.2;
+  font-weight: 700;
 }
 
 ul,
@@ -44,6 +46,10 @@ li,
 i,
 button {
   cursor: pointer;
+}
+
+img {
+  width: 100%;
 }
 
 .container {
@@ -93,6 +99,25 @@ button {
   display: flex;
 }
 
+.btn {
+  background-color: var(--navbar-bg);
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #47a1fc;
+}
+
+.text-center {
+  text-align: center;
+}
+
 :root {
   --navbar-bg: #0084fd;
   --hero-cards-bg: #b5ddff;
@@ -123,4 +148,57 @@ button {
 
 .navbar .fa-bars {
   color: white;
+}
+
+/* HERO SECTION */
+
+.hero-container {
+  padding: 5dvh 30px;
+}
+
+.hero-container .row {
+  gap: 30px;
+}
+
+.hero-card {
+  flex-direction: column;
+  background-color: var(--hero-cards-bg);
+  padding: 30px 30px;
+  gap: 30px;
+  border-radius: 20px;
+}
+
+.hero-card.pb-0 {
+  padding-bottom: 0px;
+}
+
+.hero-card h2 {
+  color: var(--navbar-bg);
+  white-space: nowrap;
+  font-size: 1.35rem;
+}
+
+.hero-card figure img {
+  display: block;
+}
+
+.hero-text {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero-text i {
+  color: var(--navbar-bg);
+  font-size: 100px;
+  height: 50px;
+  align-self: center;
+  margin-top: 50px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+}
+
+.hero-text a {
+  align-self: center;
 }
