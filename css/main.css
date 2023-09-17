@@ -19,8 +19,9 @@ h4,
 a,
 button {
   font-family: "Open Sans", sans-serif;
-  line-height: 1.4;
+  line-height: 1.8;
   font-weight: 400;
+  color: var(--text-color);
 }
 
 h1,
@@ -151,20 +152,30 @@ img {
 }
 
 /* HERO SECTION */
-
 .hero-container {
-  padding: 5dvh 30px;
+  padding: 30px;
+}
+.btn-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn i.fa-apple {
+  color: white;
+  font-size: 20px;
 }
 
 .hero-container .row {
-  gap: 30px;
+  row-gap: 30px;
 }
 
 .hero-card {
   flex-direction: column;
   background-color: var(--hero-cards-bg);
   padding: 30px 30px;
-  gap: 30px;
+  gap: 50px;
   border-radius: 20px;
 }
 
@@ -184,10 +195,10 @@ img {
 
 .hero-text {
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
 }
 
-.hero-text i {
+.hero-text i.fa-solid {
   color: var(--navbar-bg);
   font-size: 100px;
   height: 50px;
@@ -201,4 +212,87 @@ img {
 
 .hero-text a {
   align-self: center;
+}
+
+/* MEDIA */
+
+@media (min-width: 150px) {
+  .hero-container .col-8 {
+    width: 100%;
+  }
+  .hero-container .col-4 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-container .col-8 {
+    width: calc((100% / 12) * 8 - 16px);
+  }
+  .hero-container .col-4 {
+    width: calc((100% / 12) * 4 - 16px);
+  }
+
+  .hero-card {
+    height: 100%;
+  }
+
+  .hero-container .row {
+    justify-content: space-between;
+  }
+
+  .btn {
+    width: auto;
+    padding: 5px 50px;
+  }
+
+  .hero-text a {
+    align-self: flex-start;
+  }
+
+  .hero-img img {
+    width: 45%;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .navbar ul li {
+    color: white;
+    transition: 0.3s color;
+  }
+
+  .navbar ul li:hover {
+    color: var(--brand-color);
+  }
+
+  .navbar i {
+    display: none;
+  }
+
+  .navbar .btn {
+    line-height: 1;
+    background-color: white;
+    color: var(--text-color);
+    padding: 8px 10px;
+  }
+  .navbar .btn:hover {
+    background-color: var(--text-color);
+    color: white;
+  }
+
+  .hero-card {
+    flex-direction: row;
+  }
+  .hero-card figure {
+    align-self: flex-end;
+  }
+  .hero-card img {
+    width: 100%;
+  }
 }
