@@ -1,5 +1,126 @@
+/* GENRAL SETTINGS */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+p,
+strong,
+li,
+span,
+h1,
+h2,
+h3,
+h4,
+a,
+button {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+li,
+i,
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.container-lg {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.container-sm {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-2 {
+  width: calc((100% / 12) * 2);
+}
+
+.col-4 {
+  width: calc((100% / 12) * 4);
+}
+
+.col-6 {
+  width: calc((100% / 12) * 6);
+}
+
+.col-8 {
+  width: calc((100% / 12) * 8);
+}
+
+.col-fluid {
+  width: calc((100% / 12) * 12);
+}
+
+.flex {
+  display: flex;
+}
+
+:root {
+  --navbar-bg: #0084fd;
+  --hero-cards-bg: #b5ddff;
+  --brand-color: #9792e4;
+  --footer-title-color: #fdc15f;
+  --text-color: #333333;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: var(--navbar-bg);
+}
+
+.navbar ul {
+  display: none;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.logo {
+  width: 55px;
+}
+
+.navbar .fa-bars {
+  color: white;
 }
