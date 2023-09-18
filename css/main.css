@@ -44,7 +44,6 @@ a {
 
 a,
 li,
-i,
 button {
   cursor: pointer;
 }
@@ -119,6 +118,14 @@ img {
   text-align: center;
 }
 
+.icon-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
 :root {
   --navbar-bg: #0084fd;
   --hero-cards-bg: #b5ddff;
@@ -141,6 +148,10 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
+}
+
+.navbar i.fa-bars {
+  cursor: pointer;
 }
 
 .logo {
@@ -225,6 +236,10 @@ img {
   gap: 40px;
 }
 
+.planning-container img {
+  width: 90%;
+}
+
 .planning-container > .flex {
   flex-direction: column;
   gap: 65px;
@@ -270,6 +285,85 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s all linear;
+  cursor: pointer;
+}
+
+.developement-box .icon-box:hover {
+  background-color: #6d62ff;
+}
+
+/* TESTIMONIALS SECTION */
+
+.testimonials-section {
+  padding: 100px 30px;
+}
+
+.testimonials-section .icon-wrapper i {
+  color: white;
+}
+
+.testimonials-section .icon-wrapper:first-of-type {
+  transform: translateY(-4px);
+}
+
+.testimonials-section .icon-wrapper:last-of-type {
+  transform: translateY(7px);
+}
+
+.testimonials-section .row {
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonials-section .row h2 {
+  font-size: 2rem;
+  color: var(--brand-color);
+}
+.testimonials-section .row span,
+.testimonials-section .row p {
+  font-weight: 600;
+}
+
+.testimonial-card {
+  flex-direction: column;
+  background-color: var(--brand-color);
+  gap: 40px;
+  border-radius: 50px;
+  padding: 30px;
+}
+
+.testimonial-text {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.testimonial-card figure {
+  align-self: center;
+}
+
+.testimonial-text span,
+.testimonial-text strong {
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+.testimonial-text strong {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.testimonial-card figure {
+  width: 60%;
+}
+
+.testimonial-card figure img {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 /* MEDIA */
@@ -317,13 +411,30 @@ img {
   .planning-container h2 {
     font-size: 2.5rem;
   }
+  .testimonial-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 50px;
+  }
+  .testimonial-card strong,
+  .testimonial-card span {
+    text-align: left;
+  }
+
+  .testimonial-card figure {
+    width: 70%;
+  }
+
+  .testimonial-text {
+    gap: 20px;
+  }
 }
 
 @media (min-width: 992px) {
   .navbar ul {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
   }
 
   .navbar ul li {
@@ -391,5 +502,9 @@ img {
 
   .planning-container .developement-box {
     gap: 30px;
+  }
+
+  .testimonial-card figure {
+    width: 50%;
   }
 }
