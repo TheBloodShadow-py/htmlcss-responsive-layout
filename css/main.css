@@ -413,6 +413,71 @@ img {
   background-color: #6d62ff;
 }
 
+/* ABOUT US SECTION */
+
+.about-section {
+  padding: 100px 30px;
+}
+
+.about-cointainer {
+  flex-direction: column;
+}
+
+.text-about h2 {
+  font-size: 2rem;
+  color: var(--brand-color);
+  margin-bottom: 50px;
+}
+
+.text-about {
+  flex-direction: column;
+}
+
+.text-about p {
+  padding-bottom: 70px;
+}
+
+.ceo-section figure img {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.ceo-section figure {
+  width: 60%;
+  position: relative;
+}
+
+.ceo-section figure .fa-quote-left {
+  position: absolute;
+  top: -10px;
+  right: 3px;
+  font-size: 65px;
+  color: var(--brand-color);
+}
+
+.ceo-section {
+  flex-direction: column;
+  max-width: 400px;
+  gap: 20px;
+}
+
+.about-btn {
+  width: 220px;
+  background-color: var(--brand-color);
+}
+
+.about-btn:hover {
+  background-color: #6d62ff;
+}
+
+.ceo-section span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--brand-color);
+}
+
 /* MEDIA */
 
 @media (min-width: 150px) {
@@ -487,6 +552,24 @@ img {
 
   .benefits-section h2 {
     font-size: 2.3rem;
+  }
+  .about-cointainer {
+    flex-direction: row;
+    column-gap: 120px;
+  }
+  .about-btn {
+    width: unset;
+    padding: 0px 15px;
+    white-space: nowrap;
+    transform: translateX(-10px);
+  }
+  .ceo-section {
+    align-items: flex-start;
+  }
+
+  .ceo-section figure {
+    width: 100%;
+    position: relative;
   }
 }
 
