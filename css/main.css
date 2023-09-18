@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 p,
 strong,
 li,
@@ -124,6 +128,23 @@ img {
   align-items: center;
   width: 20px;
   height: 20px;
+}
+
+.bg-black {
+  background-color: var(--text-color);
+}
+
+.bg-brand {
+  background-color: var(--brand-color);
+}
+
+.link {
+  text-decoration: underline;
+  transition: 0.3s all;
+}
+
+.link:hover {
+  color: var(--footer-title-color);
 }
 
 :root {
@@ -478,6 +499,88 @@ img {
   color: var(--brand-color);
 }
 
+/* FOOTER */
+
+.get-started-section {
+  padding: 80px 30px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.get-started-section p {
+  color: white;
+  font-size: 300;
+}
+
+.get-started-section span {
+  color: white;
+}
+
+.get-started-section span .icon-wrapper {
+  color: white;
+  transform: translateY(-4px);
+}
+
+.get-started-section .icon-wrapper i {
+  font-size: 5px;
+}
+
+.get-started-section h3 {
+  color: white;
+  font-size: 2rem;
+  min-width: 300px;
+}
+
+.get-started-section p:first-of-type {
+  min-width: 300px;
+}
+
+.get-started-section h2 {
+  color: var(--footer-title-color);
+  font-size: 2.8rem;
+  white-space: nowrap;
+}
+
+.get-strated-btn {
+  background-color: white;
+  width: unset;
+  padding: 25px 80px;
+  color: var(--brand-color);
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.get-strated-btn:hover {
+  background-color: var(--footer-title-color);
+  color: white;
+}
+
+.flex-line {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bg-black .container-sm div {
+  padding: 80px 30px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.bg-black p {
+  color: white;
+  padding-bottom: 30px;
+}
+
+.bg-black .link {
+  color: var(--brand-color);
+}
+
 /* MEDIA */
 
 @media (min-width: 150px) {
@@ -657,5 +760,10 @@ img {
 
   .benefits-section .col-fluid {
     width: calc((100% / 12) * 4 - 20px);
+  }
+  .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
   }
 }
