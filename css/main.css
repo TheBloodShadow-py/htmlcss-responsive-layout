@@ -514,13 +514,8 @@ img {
   font-size: 300;
 }
 
-.get-started-section span {
+.get-started-section .flex-line {
   color: white;
-}
-
-.get-started-section span .icon-wrapper {
-  color: white;
-  transform: translateY(-4px);
 }
 
 .get-started-section .icon-wrapper i {
